@@ -1,61 +1,28 @@
-# 🚀 Getting started with Strapi
+Clone and Run Strapi Application Locally
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
 
-### `develop`
+I started by checking the prerequisites on my system such as Node.js, npm, and Git. I created a new Strapi application using the create-strapi-app command with the quickstart option. This automatically set up the project, installed dependencies, configured the database, and started the development server.
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
+Once the setup was complete, I accessed the Strapi admin panel using the browser. I created an admin account and explored the dashboard to understand the available features.
 
-```
-npm run develop
-# or
-yarn develop
-```
+Using the Content-Type Builder, I created a collection type called Article. I added fields such as title and content to define the structure of the article data. After saving the content type, Strapi restarted automatically to apply the changes.
 
-### `start`
+Next, I used the Content Manager to create a sample article entry and published it. This confirmed that the content type and database were working correctly.
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
+To make the data accessible through APIs, I enabled public permissions for the Article content type. I allowed the find and findOne actions under the Public role in the Users and Permissions settings.
 
-```
-npm run start
-# or
-yarn start
-```
+After enabling permissions, I tested the API by accessing the endpoint in the browser. The API returned the article data in JSON format, which confirmed that the backend setup was working end to end.
 
-### `build`
+Finally, I initialized a Git repository, committed the project files, and pushed them to my GitHub account. I created a main branch and a separate branch with my name, and then raised a pull request from my branch(karthick) to the main branch as required.
 
-Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
+Errors Faced and How I overcame:
 
-```
-npm run build
-# or
-yarn build
-```
+During the setup, I faced multiple errors such as npm install failing due to missing package.json. This happened because I was running commands outside the correct project directory. I resolved this by navigating to the correct folder before running commands.
 
-## ⚙️ Deployment
+I also encountered errors related to unsupported protocols and missing scripts. These issues helped me understand the difference between the Strapi core repository and a runnable Strapi application. I fixed this by creating a Strapi app using create-strapi-app instead of trying to run the core repository directly.
 
-Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
+Another issue I faced was GitHub not allowing me to create a pull request because both branches were identical. I resolved this by making a small change in the README file, committing it on my name-based branch, and pushing it again so that the PR could be created successfully.
 
-```
-yarn strapi deploy
-```
+Outcome
 
-## 📚 Learn more
-
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://strapi.io/blog) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
-
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
-
-## ✨ Community
-
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
-
----
-
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+At the end of this task, I successfully ran a Strapi application locally, created and managed content through the admin panel, exposed data using public APIs, and followed a proper Git workflow by creating branches and raising a pull request. This project helped me understand the complete flow of setting up a backend CMS application and managing it professionally.
